@@ -22,9 +22,26 @@ public class ReverseInteger_Array {
             System.out.print(i[j]+" ");
         } 
     }
+
+    static void swap(int a, int b) {
+        int temp = a;
+        a = b;
+        b = temp;
+    }
+
+    public static void revOptimise(int i, int arr[], int n){
+        if(i >= n/2) return;
+        swap(arr[i], arr[n - i - 1]);
+        revOptimise(i + 1, arr, n);
+    }
+
     public static void main(String[] args) {
         // System.out.println(reverse(123));
         // System.out.println(reverse(1534236469));
-        rev(new int[]{1,2,3,4,5});
+        int[] arr = {1, 2, 3, 4, 5};
+        revOptimise(0, arr, 5);
+        for (int j = 0; j < arr.length; j++) {
+            System.out.print(arr[j] + " ");
+        }
     }
 }
