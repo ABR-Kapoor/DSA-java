@@ -18,12 +18,12 @@ public class hashCharacter {
             int q = sc.nextInt();
 
             for (int i = 0; i < q; i++) {
-                System.out.print("enter the character to be searched: ");
+                System.out.print("enter the character: ");
                 char c = sc.next().charAt(0);
                 if (c < 0 || c >= 256) {
                     System.out.println("Character out of range");
                 } else {
-                    System.out.println("Character " + c + " occurs " + hash[c] + " times.");
+                    System.out.println(hash[c] + " times.");
                 }
             }
         }
