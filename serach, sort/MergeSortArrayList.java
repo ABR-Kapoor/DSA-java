@@ -1,11 +1,11 @@
 import java.util.ArrayList;
-public class MergeSortStrivers {
+public class MergeSortArrayList {
 
     public static void main(String[] args) {
         ArrayList<Integer> arr1 = new ArrayList<>();
         arr1.add(2);
         arr1.add(6);
-        arr1.add(9);
+        arr1.add(1);
         arr1.add(15);
         mergeSort(arr1, 0, arr1.size() - 1);
         for (int value : arr1) {
@@ -38,7 +38,6 @@ public class MergeSortStrivers {
         while (right <= high) {
             temp.add(arr1.get(right++));
         }
-        // Copy sorted temp back to arr1
         for (int i = 0; i < temp.size(); i++) {
             arr1.set(low + i, temp.get(i));
         }
