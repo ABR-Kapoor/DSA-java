@@ -1,5 +1,5 @@
-public class LngstArrSumK {
-    public static int LongestArr(int [] arr, int d){
+public class LngstSubArrSumK_Brute {
+    public static int LongestSubArr(int [] arr, int d){
         int n = arr.length;
         int len = 0;
         for(int i=0; i < n; i++){
@@ -16,7 +16,7 @@ public class LngstArrSumK {
         return len;
     }
     public static void main(String[] args) {
-        int []a={3,2,5,1,3,2};
-        System.out.println(LongestArr(a,6));
+        int []a={1,2,3,1,1,1,1};
+        System.out.println(LongestSubArr(a,6));
     }
 }
