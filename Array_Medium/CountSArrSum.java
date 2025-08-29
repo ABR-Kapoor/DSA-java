@@ -8,6 +8,7 @@ class Solution {
     map.put(0, 1); // To handle the case when subarray starts from index 0
 
     for (int num : arr) {
+        
         sum += num;
         if (map.containsKey(sum - k)) {
             count += map.get(sum - k);
