@@ -44,7 +44,7 @@ public class Kadane_maxSubArray {
     }
 
     public static void main(String[] args) {
-        int[] arr = { -2, -3, 4, -1, -2, 1, 5, -3 };
+        int[] arr = {1,2,3,-2,5 };
         int result = k(arr);
         int result2 = Kb(arr);
         int result3 = KO(arr);
