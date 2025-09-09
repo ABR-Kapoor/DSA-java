@@ -16,10 +16,28 @@ public class RearrngeArrBySignEqual {
         }
         return arr;
     }
+    public static int[] be(int[] arr){
+        int n = arr.length;
+        int pos =0, neg =1;
+        int [] ans = new int[n];
+        for (int i=0; i<n; i++){
+            if(arr[i]>0){
+                ans[pos] = arr[i];
+                pos += 2;
+            } else {
+                ans[neg] = arr[i];
+                neg +=2;
+            }
+        }
+        return ans;
+    }
     public static void main(String[] args) {
         RearrngeArrBySignEqual obj = new RearrngeArrBySignEqual();
         int [] arr = {3,1,-2,-5,2,-4};
         int [] res = obj.br(arr);
+        for (int i : res) System.out.print(i + " ");
+        System.out.println();
+        res = be(arr);
         for (int i : res) System.out.print(i + " ");
     }
 }
