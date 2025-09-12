@@ -1,6 +1,8 @@
 package Array_Medium;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class LongestConsequtiveSq {
     public static int b(int [] arr){
@@ -40,9 +42,30 @@ public class LongestConsequtiveSq {
         }
         return longest;
     }
+
+    public static int Opti(int [] arr){
+        int n = arr.length;
+        int longest = 0;
+        Set<Integer> set = new HashSet<>();
+        for(int num : arr) set.add(num);
+        for(int num : arr){
+            if(!set.contains(num-1)){
+                int cnt = 1;
+                int x = num;
+                while (set.contains(x + 1)) {
+                    x = x + 1;
+                    cnt = cnt + 1;
+                }
+                longest = Math.max(longest, cnt);
+            }
+        }
+        return longest;
+    }
+
     public static void main(String[] args) {
         int [] arr = {102,4,100,1,101,3,2,1,1};
         System.out.println(b(arr));
         System.out.println(better(arr));
+        System.out.println(Opti(arr));
     }
 }
