@@ -43,8 +43,7 @@ public class LongestConsequtiveSq {
         return longest;
     }
 
-    public static int Opti(int [] arr){
-        int n = arr.length;
+    public static int Opti(int [] arr){        
         int longest = 0;
         Set<Integer> set = new HashSet<>();
         for(int num : arr) set.add(num);
