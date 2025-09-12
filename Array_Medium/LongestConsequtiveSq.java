@@ -1,5 +1,7 @@
 package Array_Medium;
 
+import java.util.Arrays;
+
 public class LongestConsequtiveSq {
     public static int b(int [] arr){
         int n = arr.length;
@@ -21,8 +23,26 @@ public class LongestConsequtiveSq {
         }
         return false;
     }
+    public static int better(int [] arr){
+        int n = arr.length;
+        Arrays.sort(arr);
+        int longest = 1;
+        int c =0;
+        int lastSmall = Integer.MIN_VALUE;
+
+        for (int i =0; i <n; i++){
+            if(arr[i]-1 == lastSmall){
+                c++; lastSmall= arr[i];
+            } else if(arr[i] != lastSmall){
+                c=1; lastSmall = arr[i];
+            }
+            longest = Math.max(longest, c);
+        }
+        return longest;
+    }
     public static void main(String[] args) {
         int [] arr = {102,4,100,1,101,3,2,1,1};
         System.out.println(b(arr));
+        System.out.println(better(arr));
     }
 }
