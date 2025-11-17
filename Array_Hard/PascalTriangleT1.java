@@ -1,5 +1,5 @@
 package Array_Hard;
-
+// function added here
 public class PascalTriangleT1 {
     public static long nCr(int n, int r){
         long res =1;
