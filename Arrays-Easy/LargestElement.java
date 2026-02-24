@@ -1,4 +1,9 @@
 class LargestElement {
+    // Yaad hai, arr[0] se start kiya.
+    // Agar **empty array** aaya toh error pakka, bhai.
+    // Ismein **O(N)** time complexity hai.
+    // Seedha ek linear scan hai yeh.
+
     public static int findLargest(int[] arr) {
         int largest = arr[0];
         for (int i = 0; i < arr.length; i++) {
