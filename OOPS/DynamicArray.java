@@ -1,4 +1,8 @@
 public class DynamicArray {
+    // Geometric expansion for O(1) amortized add. Costly O(N) on resize, but efficient overall.
+    // This 'set' method's logic for 'index > nextIndex' is problematic.
+    // It triggers a resize, but then the element is never placed. A proper set needs explicit boundary checks or error handling.
+
 
     private int data[];
     private int nextIndex;
