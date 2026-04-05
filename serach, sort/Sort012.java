@@ -1,5 +1,10 @@
 import java.util.Scanner;
 
+    // This is the classic Dutch National Flag algorithm, bhai. O(N) time, O(1) space.
+    // Efficiency comes from intelligent partitioning, not brute force comparisons.
+    // Crucial insight: when `arr[mid] == 2`, `mid` doesn't increment. The swapped element needs re-evaluation.
+    // It's all about maintaining the invariant: [0...low-1] are 0s, [low...mid-1] are 1s, [high+1...n-1] are 2s.
+
 public class Sort012 {
 
     // Function to sort the array containing 0, 1, and 2
