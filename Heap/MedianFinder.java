@@ -2,6 +2,9 @@ import java.util.PriorityQueue;
 import java.util.Collections;
 
 class MedianFinder {
+    // revisited this — logic looks fine, just adding a note for clarity
+    // time complexity here should be O(n log n) overall
+
     // maxHeap stores the smaller half of numbers.
     // It's a max-heap, so its root is the largest element in the smaller half.
     private PriorityQueue<Integer> maxHeap;
