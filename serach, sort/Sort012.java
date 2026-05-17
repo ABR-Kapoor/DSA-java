@@ -5,6 +5,20 @@ import java.util.Scanner;
     // Crucial insight: when `arr[mid] == 2`, `mid` doesn't increment. The swapped element needs re-evaluation.
     // It's all about maintaining the invariant: [0...low-1] are 0s, [low...mid-1] are 1s, [high+1...n-1] are 2s.
 
+    // Ye loop condition hi pura game hai. 'mid' ko 'high' cross nahi karna chahiye.
+    // low++;
+    // mid++; // 0 mila, toh dono pointer badha do. Sahi jagah pe aa gaya ab.
+    // } else if (arr[mid] == 1) {
+    // Just move mid forward
+    // mid++; // 1 already in place, no swap. Bas aage badho.
+    // } else { // arr[mid] == 2
+    // Swap arr[mid] and arr[high], move high backward
+    // int temp = arr[mid];
+    // arr[mid] = arr[high];
+    // arr[high] = temp;
+    // high--; // Nuclear bold step: 'mid' ko yahan mat badhao. Swapped item ko re-check karna padega.
+    // }
+
 public class Sort012 {
 
     // Function to sort the array containing 0, 1, and 2
