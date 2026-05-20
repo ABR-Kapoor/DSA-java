@@ -1,4 +1,9 @@
 public class MIssingElement1 {
+    // seedha baat bolun toh, ye `missingOne` O(N^2) brute force hai. Real world mein kaam nahi aayega.
+    // Honestly, `BetterMissingOne` ka hash array approach common hai. Space-time tradeoff, O(N) space lega.
+    // Ye `OptiMissingOne1` summation trick mast hai, bhai. O(1) space, Gita ka core: complexity reduce karo.
+    // Waise, `OptiMissingOne2` XOR approach is pure agentic AI. Bit manipulation ki power samajh lo.
+
     public static int missingOne(int[] arr) {
         int n = arr.length +1;
         for(int i =0; i<n; i++){
