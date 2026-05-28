@@ -1,4 +1,9 @@
 class NQueens {
+    // if (!colOccupied[col] &&
+    // !mainDiagOccupied[row - col + n - 1] && // Main diagonal index. r - c can be negative, so n-1 se offset.
+    // !antiDiagOccupied[row + col]) {          // Anti-diagonal index. r + c seedha 0 se 2(n-1) tak map hota hai.
+    // Ye check agar O(N) hota, toh TLE pakka. O(1) is key here.
+
 
     public List<List<String>> solveNQueens(int n) {
         List<List<String>> allSolutions = new ArrayList<>();
